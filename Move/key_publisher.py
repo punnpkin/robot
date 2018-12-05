@@ -1,4 +1,8 @@
 #!usr/bin/env python
+#
+#主要功能：发布 key主题，将用户按键-回车-读取模式转为按键-读取模式
+#
+#
 
 import sys, tty, select, termios
 import rospy

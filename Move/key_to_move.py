@@ -1,4 +1,9 @@
 # coding=utf-8
+#
+#主要功能：订阅 key主题，读取参数，执行动作
+#
+#启动方式 ./key_to_move.py _linear_scale:=1 _angular_scale:=1
+
 
 import rospy
 from movement import *
