@@ -8,11 +8,7 @@
 
 注意 select() 函数的作用，退出程序前返回之前的标准模式
 
-启动方式：应该运行在 Master 主机上，执行
-
-```
-./key_publiser.py
-```
+启动方式：执行 `./key_publiser.py`
 
 ### key_to_move.py
 
