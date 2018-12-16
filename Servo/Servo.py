@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 from Adafruit_PWM_Servo_Driver import PWM
 import RPi.GPIO as GPIO
 import time
 import sys
 import serial
 
-ser = serial.Serial("/dev/ttyAMA0",9600)  #串口波特率设置
+#ser = serial.Serial("/dev/ttyAMA0",9600)  #串口波特率设置
 
 PWMA   = 18
 AIN1   = 22
@@ -289,7 +290,7 @@ L_Motor= GPIO.PWM(PWMA,100)
 L_Motor.start(0)
 R_Motor = GPIO.PWM(PWMB,100)
 R_Motor.start(0)
-keysacn()
+#keysacn()
 Re_Servo()
 
 if __name__ == "__main__":

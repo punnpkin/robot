@@ -1,9 +1,5 @@
-# coding=utf-8
-#
-#主要功能：订阅 key主题，读取参数，执行动作
-#
-#启动方式 ./key_to_move.py _linear_scale:=1 _angular_scale:=1
-
+#!usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import rospy
 from movement import *
@@ -36,19 +32,21 @@ def key_trans(msg):
 
 if __name__ == '__main__':
     rospy.init_node('keys_to_move')
+    try:  
+        rospy.Subscriber('keys', String, key_trans)
 
-    rospy.Subscriber('keys', String, key_trans)
+        if rospy.has_param('~linear_scale'):
+            g_key_scale = rospy.get_param('~linear_scale')
+        else:
+            rospy.logwarn("scale is not provided; using %.1f" % g_linear_scale)
 
-    if rospy.has_param('~linear_scale'):
-        g_key_scale = rospy.get_param('~linear_scale')
-    else:
-        rospy.logwarn("scale is not provided; using %.1f" % g_linear_scale)
+        if rospy.has_param('~angular_scale'):
+            g_key_scale = rospy.get_param('~angular_scale')
+        else:
+            rospy.logwarn("scale is not provided; using %.1f" % g_angular_scale)
 
-    if rospy.has_param('~angular_scale'):
-        g_key_scale = rospy.get_param('~angular_scale')
-    else:
-        rospy.logwarn("scale is not provided; using %.1f" % g_angular_scale)
-
-    rate = rospy.Rate(10)
-    while not rospy.is_shutdown():
-        rate.sleep()
+        rate = rospy.Rate(10)
+        while not rospy.is_shutdown():
+            rate.sleep()
+    finally:
+        GPIO.cleanup()

@@ -1,7 +1,5 @@
-#!/home/pi/server
-# coding=utf-8
-#ʹÓó¬Éù²¨²â¾àģ¿éʱ,VCC½ÓÊ÷ݮÅɵÄ5V,GND½ÓÊ÷ݮÅÉGND¡£trig½ÓÊ÷ݮÅÉ38£¬echo½ÓÊ÷ݮÅÉ40.
-#GPIO±àÂ뷽ʽΪBOARD£¡£¡
+
+
 import  RPi.GPIO as GPIO
 import time
 
