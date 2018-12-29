@@ -69,7 +69,7 @@ delta_bottom = 2 #底座舵机转动幅度
 
 def setServoPulse(channel, pulse):
   pulseLength = 1000000.0                   # 1,000,000 us per second
-  pulseLength /= 50.0                       # 60 Hz
+  pulseLength /= 50.0                       # 50 Hz
   print "%d us per period" % pulseLength
   pulseLength /= 4096.0                     # 12 bits of resolution
   print "%d us per bit" % pulseLength
@@ -290,7 +290,7 @@ L_Motor= GPIO.PWM(PWMA,100)
 L_Motor.start(0)
 R_Motor = GPIO.PWM(PWMB,100)
 R_Motor.start(0)
-#keysacn()
+keysacn()
 Re_Servo()
 
 if __name__ == "__main__":
