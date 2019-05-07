@@ -28,7 +28,7 @@ $$
 
 思路：假设需要的速度是 $v,\omega$，以及需要偏向的角度是 $\theta$
 $$
-\begin{bmatrix}Vcos\theta\\Vsin\theta\\\omega\end{bmatrix}=\begin{bmatrix}V_x\\V_y\\\omega\end{bmatrix}=
+\begin{bmatrix}Vcos\theta\\Vsin\theta\\\omega\end{bmatrix}=\begin{bmatrix}V_x \\ V_y \\ \omega\end{bmatrix}=
 \begin{bmatrix}
 \frac{1}{2} & \frac{1}{2} & -1\\ 
 \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} & 0\\ 
@@ -51,13 +51,13 @@ $$
 $$
 带入左式：
 $$
-\begin{bmatrix}a\\b \\c \end{bmatrix}=
+\begin{bmatrix}a\\ b \\c \end{bmatrix}=
 \begin{bmatrix}
 \frac{1}{3} & \frac{\sqrt{3}}{3} & r \\ 
 \frac{1}{3} & -\frac{\sqrt{3}}{3} & r \\ 
 -\frac{2}{3} & 0 & r
 \end{bmatrix}
-\begin{bmatrix}Vcos\theta\\Vsin\theta\\\omega\end{bmatrix}
+\begin{bmatrix}Vcos\theta\\ Vsin\theta\\ \omega\end{bmatrix}
 $$
 python 实现：
 
