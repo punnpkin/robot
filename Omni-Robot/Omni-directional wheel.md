@@ -28,13 +28,13 @@ $$
 
 思路：假设需要的速度是 $v,\omega$，以及需要偏向的角度是 $\theta$
 $$
-\begin{bmatrix}Vcos\theta\\Vsin\theta\\\omega\end{bmatrix}=\begin{bmatrix}V_x \\ V_y \\ \omega\end{bmatrix}=
+\begin{bmatrix}Vcos\theta\\ Vsin\theta\\\omega\end{bmatrix}=\begin{bmatrix}V_x \\ V_y \\ \omega\end{bmatrix}=
 \begin{bmatrix}
 \frac{1}{2} & \frac{1}{2} & -1\\ 
 \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} & 0\\ 
 \frac{1}{3r} & \frac{1}{3r} & \frac{1}{3r}
 \end{bmatrix}
-\begin{bmatrix}a\\b \\c \end{bmatrix}
+\begin{bmatrix}a\\ b \\c \end{bmatrix}
 $$
 然后根据这个反解出 a，b，c 分给三个轮子，先对矩阵求逆：
 $$
@@ -51,7 +51,7 @@ $$
 $$
 带入左式：
 $$
-\begin{bmatrix}a\\ b \\c \end{bmatrix}=
+\begin{bmatrix}a\\ b \\ c \end{bmatrix}=
 \begin{bmatrix}
 \frac{1}{3} & \frac{\sqrt{3}}{3} & r \\ 
 \frac{1}{3} & -\frac{\sqrt{3}}{3} & r \\ 
