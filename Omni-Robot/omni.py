@@ -55,16 +55,16 @@ def compute(speed,angle,omega):
 
 def move(va,vb,vc,t_time = 4):
     A_Motor.ChangeDutyCycle(abs(va))
-    GPIO.output(AIN1,bool(va<0))
-    GPIO.output(AIN2,bool(va>0))
+    GPIO.output(AIN1,bool(va>0))
+    GPIO.output(AIN2,bool(va<0))
 
     B_Motor.ChangeDutyCycle(abs(vb))
     GPIO.output(BIN1,bool(vb<0))
     GPIO.output(BIN2,bool(vb>0))
     
     C_Motor.ChangeDutyCycle(abs(vc))
-    GPIO.output(CIN1,bool(vc<0))
-    GPIO.output(CIN2,bool(vc>0))
+    GPIO.output(CIN1,bool(vc>0))
+    GPIO.output(CIN2,bool(vc<0))
 
     time.sleep(t_time)
 
